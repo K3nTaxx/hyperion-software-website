@@ -1,0 +1,26 @@
+# Netlify : rien à régler dans l'interface, tout est ici.
+# À chaque envoi sur GitHub (branche main), Netlify construit les pages depuis src/
+# (tools/publish.py) et publie uniquement le dossier dist/ : pages, css, js, images.
+
+[build]
+  command = "python3 tools/publish.py || python tools/publish.py"
+  publish = "dist"
+
+# Les feuilles de style et les scripts portent un numéro de version (?v=...) qui change à chaque
+# modification : le navigateur peut les garder longtemps sans jamais afficher une ancienne version.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

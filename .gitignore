@@ -1,0 +1,17 @@
+# Pages générées par tools/build.py : la source est dans src/ (Netlify les reconstruit à chaque envoi)
+/*.html
+
+# Dossier publié par Netlify (créé par tools/publish.py)
+/dist/
+
+# Kit logo d'origine (avec la police achetée) : gardé sur l'ordinateur, pas sur le dépôt public.
+# Le site utilise ses propres versions dans assets/ (bouclier vectoriel, police du logo).
+/Logos/
+
+# Divers
+__pycache__/
+*.pyc
+.claude/settings.local.json
+Thumbs.db
+desktop.ini
+.DS_Store

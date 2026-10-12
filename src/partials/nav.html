@@ -1,0 +1,108 @@
+  <header class="nav" id="nav">
+    <div class="nav-wrap">
+      <a class="nav-logo" href="{{HOME_HREF}}"{{HOME_ATTR}} aria-label="Hyperion Software — Accueil">
+        <img src="assets/img/hyperion-logo.png" alt="Hyperion Software Logo" width="462" height="179" />
+      </a>
+
+      <nav class="nav-pill" id="navPill" aria-label="Navigation principale">
+        <span class="nav-blob" id="navBlob" aria-hidden="true"></span>
+        <a class="nav-a{{ACTIVE_HOME}}" href="{{HOME_HREF}}"{{HOME_ATTR}}>Accueil</a>
+
+        <div class="nav-dd">
+          <button class="nav-a{{ACTIVE_DATACLONE}}" type="button" aria-haspopup="true">DataClone<svg><use href="#i-chevron"/></svg></button>
+          <div class="mega">
+            <div class="mega-links">
+              <a{{CUR_DATACLONE}} href="dataclone.html"><i><svg><use href="#i-shield"/></svg></i><span>DataClone : vue d'ensemble</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_VMWARE}} href="sauvegarde-vmware-hyper-v.html"><i><svg><use href="#i-layers"/></svg></i><span>Sauvegarde VMware &amp; Hyper-V</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_EXCH}} href="sauvegarde-exchange-office-365.html"><i><svg><use href="#i-mail"/></svg></i><span>Sauvegarde Exchange &amp; Office 365</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_DISQUE}} href="image-disque-p2v.html"><i><svg><use href="#i-drive"/></svg></i><span>Image disque &amp; P2V</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_SURV}} href="gestion-centralisee.html"><i><svg><use href="#i-gauge"/></svg></i><span>Gestion centralisée</span><svg class="go"><use href="#i-arrow"/></svg></a>
+            </div>
+            <div class="mega-visual"><img src="assets/img/dashboard.webp" alt="" loading="lazy" /></div>
+          </div>
+        </div>
+
+        <div class="nav-dd">
+          <button class="nav-a{{ACTIVE_CYBER}}" type="button" aria-haspopup="true">Cyber-résilience<svg><use href="#i-chevron"/></svg></button>
+          <div class="mega mega--wide">
+            <div class="mega-links mega-links--2">
+              <a{{CUR_STEALTH}} href="mode-stealth.html"><i><svg><use href="#i-eyeoff"/></svg></i><span>Mode Stealth®</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_AIRGAP}} href="air-gap.html"><i><svg><use href="#i-air"/></svg></i><span>Air Gap</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_RDO}} href="medias-rdo.html"><i><svg><use href="#i-disc"/></svg></i><span>Médias RDO®</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_ANSSI}} href="conformite-anssi.html"><i><svg><use href="#i-file"/></svg></i><span>Conformité ANSSI</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_DR}} href="disaster-recovery-test.html"><i><svg><use href="#i-refresh"/></svg></i><span>Disaster Recovery Test</span><svg class="go"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-dd">
+          <button class="nav-a{{ACTIVE_OFFRES}}" type="button" aria-haspopup="true">Appliances &amp; Cloud<svg><use href="#i-chevron"/></svg></button>
+          <div class="mega mega--sm">
+            <div class="mega-links">
+              <a{{CUR_APPL}} href="appliances.html"><i><svg><use href="#i-server"/></svg></i><span>Hyperion Appliances</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_SAAS}} href="dataclone-saas.html"><i><svg><use href="#i-building"/></svg></i><span>DataClone SaaS</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_CLOUD}} href="backup-cloud-azure.html"><i><svg><use href="#i-cloud"/></svg></i><span>Backup Cloud Azure</span><svg class="go"><use href="#i-arrow"/></svg></a>
+            </div>
+            <div class="mega-visual is-hw"><img src="assets/img/appliances.webp" alt="" loading="lazy" /></div>
+          </div>
+        </div>
+
+        <div class="nav-dd">
+          <button class="nav-a{{ACTIVE_HYPERION}}" type="button" aria-haspopup="true">Hyperion<svg><use href="#i-chevron"/></svg></button>
+          <div class="mega mega--wide">
+            <div class="mega-links mega-links--2">
+              <a{{CUR_POURQUOI}} href="pourquoi-hyperion.html"><i><svg><use href="#i-check"/></svg></i><span>Pourquoi Hyperion</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_DATTAK}} href="cyber-assurance-dattak.html"><i><svg><use href="#i-shield"/></svg></i><span>Cyber-assurance Dattak</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_PARTNERS}} href="partenariats-region-sud.html"><i><svg><use href="#i-users"/></svg></i><span>Partenariats Région Sud</span><svg class="go"><use href="#i-arrow"/></svg></a>
+              <a{{CUR_RENTREE}} href="actualites-rentree-2026.html"><i><svg><use href="#i-zap"/></svg></i><span>Actualités</span><svg class="go"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="nav-right">
+        <a class="nav-tel" href="tel:+33980806003"><svg><use href="#i-phone"/></svg><span>+33 (0)9 80 80 60 03</span></a>
+        <a class="btn btn--ink btn--sm" href="contact.html">
+          <span class="btn-label" data-text="Nous contacter">Nous contacter</span>
+          <span class="btn-ico"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+        </a>
+        <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mnav" id="mnav">
+    <div class="mnav-inner">
+      <a class="mnav-top" href="{{HOME_HREF}}"{{HOME_ATTR}}>Accueil</a>
+      <details class="mnav-group"{{OPEN_DATACLONE}}><summary>DataClone<svg><use href="#i-chevron"/></svg></summary>
+        <a href="dataclone.html">DataClone : vue d'ensemble</a>
+        <a href="sauvegarde-vmware-hyper-v.html">Sauvegarde VMware &amp; Hyper-V</a>
+        <a href="sauvegarde-exchange-office-365.html">Sauvegarde Exchange &amp; Office 365</a>
+        <a href="image-disque-p2v.html">Image disque &amp; P2V</a>
+        <a href="gestion-centralisee.html">Gestion centralisée</a>
+      </details>
+      <details class="mnav-group"{{OPEN_CYBER}}><summary>Cyber-résilience<svg><use href="#i-chevron"/></svg></summary>
+        <a href="mode-stealth.html">Mode Stealth®</a>
+        <a href="air-gap.html">Air Gap</a>
+        <a href="medias-rdo.html">Médias RDO®</a>
+        <a href="conformite-anssi.html">Conformité ANSSI</a>
+        <a href="disaster-recovery-test.html">Disaster Recovery Test</a>
+      </details>
+      <details class="mnav-group"{{OPEN_OFFRES}}><summary>Appliances &amp; Cloud<svg><use href="#i-chevron"/></svg></summary>
+        <a href="appliances.html">Hyperion Appliances</a>
+        <a href="dataclone-saas.html">DataClone SaaS</a>
+        <a href="backup-cloud-azure.html">Backup Cloud Azure</a>
+      </details>
+      <details class="mnav-group"{{OPEN_HYPERION}}><summary>Hyperion<svg><use href="#i-chevron"/></svg></summary>
+        <a href="pourquoi-hyperion.html">Pourquoi Hyperion</a>
+        <a href="cyber-assurance-dattak.html">Cyber-assurance Dattak</a>
+        <a href="partenariats-region-sud.html">Partenariats Région Sud</a>
+        <a href="actualites-rentree-2026.html">Actualités</a>
+      </details>
+      <a class="btn btn--blue mnav-cta" href="contact.html">
+        <span class="btn-label" data-text="Nous contacter">Nous contacter</span>
+        <span class="btn-ico"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="mnav-tel" href="tel:+33980806003">+33 (0)9 80 80 60 03</a>
+    </div>
+  </div>

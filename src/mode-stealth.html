@@ -1,0 +1,267 @@
+<!--@page stealth-->
+<!DOCTYPE html>
+<html lang="fr" class="is-loading">
+<head>
+<!--@head-->
+  <title>Mode Stealth® — Sauvegardes invisibles du réseau | Hyperion Software</title>
+  <meta name="description" content="Le mode Stealth® est un procédé breveté qui rend vos sauvegardes invisibles sur le réseau." />
+</head>
+<body>
+<!--@sprite-->
+<!--@intro-->
+<!--@nav-->
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="page-hero">
+      <div class="bgfx bgfx--dots" aria-hidden="true"></div>
+      <div class="container">
+        <div class="page-hero-grid">
+          <div>
+            <h1 class="h1 hero-title"><span class="ln"><span class="ln-in">Le Mode <em>Stealth<sup>®</sup></em></span></span></h1>
+            <p class="lead" data-intro>Votre sauvegarde en mode furtif</p>
+            <div class="actions" data-intro>
+              <a class="btn btn--ink magnetic" href="https://calendly.com/sp-hyperion-soft/30min" target="_blank" rel="noopener">
+                <span class="btn-label" data-text="Demander une démonstration">Demander une démonstration</span>
+                <span class="btn-ico"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+              </a>
+            </div>
+          </div>
+          <p class="lead" data-intro>Le mode Stealth® est un procédé breveté qui rend vos sauvegardes invisibles sur le réseau.</p>
+        </div>
+
+        <!-- the backup server is the one machine nobody on the network can see -->
+        <div class="netmap" id="netmap" data-intro aria-hidden="true">
+          <svg class="net" viewBox="0 0 1200 460">
+            <path class="link" d="M150 110 L330 170"/><path class="link" d="M110 250 L330 170"/><path class="link" d="M110 250 L320 320"/><path class="link" d="M170 380 L320 320"/><path class="link" d="M330 170 L320 320"/>
+            <path class="link" d="M1050 110 L870 170"/><path class="link" d="M1090 250 L870 170"/><path class="link" d="M1090 250 L880 320"/><path class="link" d="M1030 380 L880 320"/><path class="link" d="M870 170 L880 320"/>
+            <path class="link" id="arcTop" d="M330 170 C 460 40, 740 40, 870 170"/>
+            <path class="link" id="arcBot" d="M880 320 C 750 440, 450 440, 320 320"/>
+            <path class="link link--dash" id="toS1" d="M360 185 L500 230"/>
+            <path class="link link--dash" id="toS2" d="M350 310 L500 262"/>
+            <path class="link link--dash" id="toS3" d="M840 185 L700 230"/>
+            <path class="link link--dash" id="toS4" d="M850 310 L700 262"/>
+            <circle class="pkt" r="4"><animateMotion dur="3.6s" repeatCount="indefinite"><mpath href="#arcTop"/></animateMotion></circle>
+            <circle class="pkt" r="4"><animateMotion dur="4.2s" begin="-1.5s" repeatCount="indefinite"><mpath href="#arcBot"/></animateMotion></circle>
+            <circle class="pkt" r="3"><animateMotion dur="2.4s" repeatCount="indefinite" path="M150 110 L330 170"/></circle>
+            <circle class="pkt" r="3"><animateMotion dur="2.8s" begin="-1s" repeatCount="indefinite" path="M1030 380 L880 320"/></circle>
+            <circle class="pkt pkt--blocked" r="3.5"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#toS1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.7;1" dur="2.2s" repeatCount="indefinite"/></circle>
+            <circle class="pkt pkt--blocked" r="3.5"><animateMotion dur="2.6s" begin="-.8s" repeatCount="indefinite"><mpath href="#toS2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.7;1" dur="2.6s" begin="-.8s" repeatCount="indefinite"/></circle>
+            <circle class="pkt pkt--blocked" r="3.5"><animateMotion dur="2.4s" begin="-1.2s" repeatCount="indefinite"><mpath href="#toS3"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.7;1" dur="2.4s" begin="-1.2s" repeatCount="indefinite"/></circle>
+            <circle class="pkt pkt--blocked" r="3.5"><animateMotion dur="2s" begin="-.4s" repeatCount="indefinite"><mpath href="#toS4"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.7;1" dur="2s" begin="-.4s" repeatCount="indefinite"/></circle>
+            <g class="node"><rect x="118" y="78" width="64" height="64" rx="12"/><use href="#i-monitor" x="136" y="96" width="28" height="28"/></g>
+            <g class="node"><rect x="78" y="218" width="64" height="64" rx="12"/><use href="#i-users" x="96" y="236" width="28" height="28"/></g>
+            <g class="node"><rect x="138" y="348" width="64" height="64" rx="12"/><use href="#i-monitor" x="156" y="366" width="28" height="28"/></g>
+            <g class="node"><rect x="298" y="138" width="64" height="64" rx="12"/><use href="#i-server" x="316" y="156" width="28" height="28"/></g>
+            <g class="node"><rect x="288" y="288" width="64" height="64" rx="12"/><use href="#i-db" x="306" y="306" width="28" height="28"/></g>
+            <g class="node"><rect x="1018" y="78" width="64" height="64" rx="12"/><use href="#i-monitor" x="1036" y="96" width="28" height="28"/></g>
+            <g class="node"><rect x="1058" y="218" width="64" height="64" rx="12"/><use href="#i-cloud" x="1076" y="236" width="28" height="28"/></g>
+            <g class="node"><rect x="998" y="348" width="64" height="64" rx="12"/><use href="#i-monitor" x="1016" y="366" width="28" height="28"/></g>
+            <g class="node"><rect x="838" y="138" width="64" height="64" rx="12"/><use href="#i-server" x="856" y="156" width="28" height="28"/></g>
+            <g class="node"><rect x="848" y="288" width="64" height="64" rx="12"/><use href="#i-db" x="866" y="306" width="28" height="28"/></g>
+            <circle class="shield-ring" cx="600" cy="245" r="104"/>
+            <g class="ghost">
+              <rect class="ghost-outline" x="540" y="185" width="120" height="120" rx="20"/>
+              <use href="#stealth-mark" x="558" y="210" width="84" height="72"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UNE PROTECTION INVISIBLE ============ -->
+    <section class="sec sec--alt" id="concept">
+      <div class="container split">
+        <div class="prose">
+          <h2 class="h2 reveal">Le mode Stealth® : une protection <em>invisible</em></h2>
+          <p>Hyperion Software vous garantit ainsi l'incorruptibilité de vos sauvegardes en cas d'attaque virale de type Ransomwares, Virus, Chevaux de Troie, Cryptolockers...</p>
+          <p>Si vous êtes victime d'une attaque virale, le mode Stealth® intégré dans nos machines masque et protège vos sauvegardes, et vous assure une restauration totale en cas de besoin.</p>
+        </div>
+        <div class="panel" id="stealthPanel">
+          <div class="panel-head">
+            <svg class="mark" aria-hidden="true"><use href="#stealth-mark"/></svg>
+            <strong>Mode Stealth</strong>
+            <span class="switch" aria-hidden="true"></span>
+          </div>
+          <div class="prow"><svg><use href="#i-server"/></svg>Serveur invisible<span class="switch" aria-hidden="true"></span></div>
+          <div class="prow"><svg><use href="#i-bug"/></svg>Anti-malware<span class="switch" aria-hidden="true"></span></div>
+          <div class="prow"><svg><use href="#i-zap"/></svg>Kill Switch<span class="switch" aria-hidden="true"></span></div>
+          <div class="prow"><svg><use href="#i-shield"/></svg>Protection 24/7<span class="switch" aria-hidden="true"></span></div>
+          <p class="panel-status"><svg><use href="#i-shield"/></svg>Protection active</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AVANTAGES ============ -->
+    <section class="sec" id="avantages">
+      <div class="container">
+        <div class="sec-head">
+          <h2 class="h2 reveal"><em>Avantages</em> du Mode Stealth®</h2>
+          <p class="lead reveal">Face à la multiplication des attaques virales, vos sauvegardes sont devenues un élément critique de sécurité.</p>
+        </div>
+        <div class="adv-grid">
+          <article class="adv reveal">
+            <h3>Protection contre les attaques</h3>
+            <p>Les attaques virales et notamment à base de Ransomware se multiplient et rendent votre architecture IT extrêmement vulnérable.</p>
+            <p>Les sauvegardes ne sont donc plus de simples moyens de stockage de données mais réellement un élément de sécurité de votre informatique.</p>
+          </article>
+          <article class="adv reveal">
+            <h3>Restauration rapide et intégrale</h3>
+            <p>En cas de destruction de vos données, elles sont la pierre angulaire de votre faculté à restaurer rapidement et intégralement vos serveurs, vos datas et tout ce qui a pu être détruit ou crypté.</p>
+            <p>Il est donc impératif que vos sauvegardes soient tout aussi protégées et peut-être même plus que le reste de vos données.</p>
+          </article>
+        </div>
+        <p class="tagline reveal">Protection <em>24/7</em> de vos sauvegardes critiques</p>
+      </div>
+    </section>
+
+    <!-- ============ CARACTÉRISTIQUES ============ -->
+    <section class="sec sec--alt" id="caracteristiques">
+      <div class="container">
+        <div class="sec-head">
+          <h2 class="h2 reveal"><em>Caractéristiques</em> du Mode Stealth®</h2>
+          <p class="lead reveal">Une protection multicouche pour garantir l'intégrité de vos sauvegardes</p>
+        </div>
+        <div class="layers-wrap">
+          <div class="stack3d" aria-hidden="true">
+            <div class="stack3d-in">
+              <div class="plate-core"><svg><use href="#stealth-mono" style="color:#fff"/></svg></div>
+              <div class="plate" style="--k:0"><span>1</span></div>
+              <div class="plate" style="--k:1"><span>2</span></div>
+              <div class="plate" style="--k:2"><span>3</span></div>
+              <div class="plate" style="--k:3"><span>4</span></div>
+            </div>
+          </div>
+          <div class="carac">
+            <article class="cc">
+              <div class="cc-top"><svg><use href="#i-air"/></svg><b>1</b></div>
+              <h3>Clonage agentless par aspiration</h3>
+              <ul>
+                <li>Aucun accés depuis l'exterieur vers la sauvegarde : aucun risque de pollution des sauvegardes par malware ou hack.</li>
+                <li>Pas de droit d'écriture sur la destination : aucun processus ne vient écrire sur votre sauvegarde.</li>
+              </ul>
+            </article>
+            <article class="cc">
+              <div class="cc-top"><svg><use href="#i-eyeoff"/></svg><b>2</b></div>
+              <h3>Techniques avancées de camouflage</h3>
+              <ul>
+                <li>Serveur de sauvegarde centralisé et hors domaine invisible sur le réseau</li>
+                <li>Partages surveillés et interdits pour empêcher les failles de sécurité sur la destination</li>
+                <li>Kill switch pour bloquer les processus d'écriture (logiciels ou humains) sur les sauvegardes et les médias.</li>
+              </ul>
+            </article>
+            <article class="cc">
+              <div class="cc-top"><svg><use href="#i-activity"/></svg><b>3</b></div>
+              <h3>Sonde comportementale</h3>
+              <ul>
+                <li>Pour détecter les variations inhabituelles dans les sources de données</li>
+                <li>Passer en mode protégé pour prévenir l'administrateur</li>
+              </ul>
+            </article>
+            <article class="cc">
+              <div class="cc-top"><svg><use href="#i-bug"/></svg><b>4</b></div>
+              <h3>Honeypots</h3>
+              <ul>
+                <li>Pour piéger les attaquants et protéger les sauvegardes</li>
+                <li>Sans impliquer l'intégrité de celles-ci</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECHNOLOGIES ============ -->
+    <section class="sec" id="technologies">
+      <div class="container">
+        <div class="sec-head">
+          <h2 class="h2 reveal"><em>Technologies</em> du mode Stealth®</h2>
+          <p class="lead reveal">Hyperion software a développé et breveté des technologies spécifiques afin de protéger les systèmes d'exploitation comme les données, les machines physiques comme les machines virtuelles que vous avez sauvegardées.</p>
+        </div>
+        <div class="tech">
+          <nav class="tech-index" aria-label="Technologies">
+            <a href="#t1" class="is-active"><b>1</b>Serveur de sauvegarde centralisé et hors domaine</a>
+            <a href="#t2"><b>2</b>Partages surveillés et interdits</a>
+            <a href="#t3"><b>3</b>Pas de droit d'écriture sur la destination</a>
+            <a href="#t4"><b>4</b>Disques et médias protégés</a>
+            <a href="#t5"><b>5</b>Sondes comportementales de DataClone</a>
+            <a href="#t6"><b>6</b>Les honeypots de DataClone</a>
+          </nav>
+          <div class="tech-list">
+            <article class="tb" id="t1">
+              <div class="tb-top"><svg><use href="#i-server"/></svg><h3>Serveur de sauvegarde centralisé et hors domaine</h3></div>
+              <p>Tout d'abord, il faut savoir que notre logiciel DataClone, s'installe de manière centralisée sur la destination de sauvegarde. Pour sauvegarder vos machines physiques, machines virtuelles, données, etc., vous n'aurez pas besoin d'installer d'agent sur vos serveurs sources. Ceci vous permet de placer votre serveur de sauvegarde hors tout domaine, afin de limiter sa visibilité sur votre réseau.</p>
+              <div class="tb-media" aria-hidden="true">
+                <svg class="tb-domain" viewBox="0 0 420 150">
+                  <rect class="dom" x="10" y="14" width="250" height="122" rx="14"/>
+                  <g class="dn"><rect x="34" y="40" width="44" height="44" rx="9"/><use href="#i-monitor" x="44" y="50" width="24" height="24"/></g>
+                  <g class="dn"><rect x="112" y="40" width="44" height="44" rx="9"/><use href="#i-server" x="122" y="50" width="24" height="24"/></g>
+                  <g class="dn"><rect x="190" y="40" width="44" height="44" rx="9"/><use href="#i-db" x="200" y="50" width="24" height="24"/></g>
+                  <path class="pull" d="M256 62 H330"/>
+                  <g class="bk"><rect x="334" y="34" width="62" height="62" rx="12"/><use href="#stealth-mono" x="347" y="49" width="36" height="31"/></g>
+                </svg>
+              </div>
+            </article>
+            <article class="tb" id="t2">
+              <div class="tb-top"><svg><use href="#i-lock"/></svg><h3>Partages surveillés et interdits</h3></div>
+              <p>Grâce à cette sauvegarde centralisée ne nécessitant pas d'agent, le mode Stealth® va surveiller et interdire les partages qui sont d'énormes failles de sécurité, limitant ainsi grandement les accès extérieurs et les attaques de Malwares, Ransomwares, etc.</p>
+            </article>
+            <article class="tb" id="t3">
+              <div class="tb-top"><svg><use href="#i-pen-off"/></svg><h3>Pas de droit d'écriture sur la destination</h3></div>
+              <p>Aucun processus ne vient écrire sur votre sauvegarde. Étant donné que vous n'installez aucun agent sur vos sources à sauvegarder, aucune machine et aucun utilisateur ne possède de droit d'écriture vers votre destination de sauvegarde. Les Malwares et Ransomwares utilisent des droits d'écriture récupérés la plupart du temps sur des postes utilisateurs ou administrateurs, ou des logins et mot de passe stockée dans des bases de registre qui donnent accès aux serveurs. N'installant aucun agent, dataclone contourne ce problème et ne laisse derrière lui aucun écueil exploitable par un programme ou un utilisateur malveillant.</p>
+            </article>
+            <article class="tb" id="t4">
+              <div class="tb-top"><svg><use href="#i-drive"/></svg><h3>Disques et médias protégés</h3></div>
+              <p>Emplacements de sauvegardes et Médias d'archivage verrouillés et contrôlés par notre logiciel. Dernier élément du mode Stealth®, mais non le moindre, les disques utilisés pour le premier niveau de sauvegarde comme pour les médias extractibles RDO® sont contrôlés et protégés par notre logiciel. Ainsi, aucun programme ne possède le droit d'écriture sur nos emplacements de sauvegarde, et même un administrateur local connecté sur la machine se voit privé de ce droit. Vous évitez ainsi qu'un programme malicieux ou un utilisateur malhonnête ne vienne détruire vos données sauvegardées.</p>
+              <div class="tb-media" aria-hidden="true"><img class="hw" src="assets/img/rdo.webp" alt="" loading="lazy" /></div>
+            </article>
+            <article class="tb" id="t5">
+              <div class="tb-top"><svg><use href="#i-activity"/></svg><h3>Sondes comportementales de DataClone</h3></div>
+              <p>Surveillance en continu des activités de l'utilisateur et de l'ordinateur distant pour détecter les comportements suspects. Elles utilisent des algorithmes de machine learning pour analyser les données en temps réel et détecter les anomalies. Les sondes peuvent être configurées pour détecter des comportements spécifiques, tels que la modification de fichiers sensibles ou l'utilisation de programmes malveillants. En cas de détection d'un comportement suspect, une alerte est générée pour permettre une réponse rapide. Les sondes comportementales de DataClone peuvent être utilisées en combinaison avec d'autres fonctionnalités de sécurité pour renforcer la protection contre les cybermenaces.</p>
+            </article>
+            <article class="tb" id="t6">
+              <div class="tb-top"><svg><use href="#i-bug"/></svg><h3>Les honeypots de DataClone</h3></div>
+              <p>Les honeypots de DataClone sont des répertoires qui sont utilisés pour piéger les hackers et les malwares. Ces répertoires contiennent des fichiers fictifs qui ne sont pas censés être modifiés. Si des modifications sont détectées, la sauvegarde est automatiquement désactivée pour protéger les données et l'utilisateur est immédiatement informé pour qu'il puisse agir en conséquence. Les honeypots sont analysés régulièrement pour détecter toute activité suspecte et peuvent être configurés pour être utilisés avec des systèmes Windows ou Linux.</p>
+              <div class="tb-media" aria-hidden="true"><img class="ui" src="assets/img/ui-honeypot.webp" alt="" loading="lazy" /></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MODE STEALTH+ ET STEALTH POUR VEEAM ============ -->
+    <section class="sec sec--navy on-dark st-plus" id="veeam">
+      <div class="container">
+        <div class="stp-head">
+          <h2 class="h2 reveal">Le Mode <em>Stealth+</em></h2>
+          <p class="reveal">Activez le Mode Stealth+ et bénéficiez de la seule technologie de sauvegarde certifiée par un assureur cyber. Cette protection brevetée rend vos sauvegardes totalement imperméables aux ransomwares, même les plus sophistiqués.</p>
+        </div>
+        <div class="stp-grid">
+          <ul class="kv-grid kv-grid--dark kv-grid--1">
+            <li><b>Kill Switch automatique</b><span>Blocage systématique et comportemental des processus d'écriture malveillants</span></li>
+            <li><b>Cloisonnement réseau</b><span>Périmètre de sécurité avec suppression des partages non sécurisés</span></li>
+            <li><b>Surveillance temps réel</b><span>Contrôle strict des processus autorisés à accéder aux backups</span></li>
+            <li><b>Double couche anti-ransomware</b><span>Protection renforcée pour sauvegardes tierces</span></li>
+            <li><b>Certification Dattak</b><span>Seule solution agréée par un assureur cyber (-15% sur votre prime)</span></li>
+          </ul>
+          <article class="stp-veeam">
+            <img src="assets/img/icon-veeam.png" alt="" />
+            <h3 class="h3">Stealth pour <em>Veeam®</em></h3>
+            <p class="stp-lead">Sécurisation avancée des sauvegardes Veeam®.</p>
+            <p>Vos sauvegardes Veeam® existantes bénéficient du même niveau de protection que nos sauvegardes natives. Isolation automatique, contrôle d'intégrité, verrouillage des fichiers VBK&nbsp;: une barrière efficace contre les cybermenaces, sans changer vos outils.</p>
+            <ul>
+              <li><b>Protection renforcée pour sauvegardes tierces</b> - 2 modes Stealth&nbsp;: Protection bas niveau stricte contre les tentatives d'écritures et filtrage des processus autorisés</li>
+              <li><b>2 couches anti-ransomware</b> - Protection inédite pour protéger les fichiers de backup tiers</li>
+              <li><b>Mode Stealth Spécifique Veeam®</b> - Nouveau&nbsp;: Protection dédiée optimisée pour l'environnement Veeam</li>
+              <li><b>Migration simplifiée</b> - Transition en douceur de Veeam vers DataClone sans perte de données ni interruption de service</li>
+            </ul>
+            <p class="stp-end">Gardez vos investissements Veeam® tout en bénéficiant de la protection anti-ransomware la plus avancée du marché.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!--@footer-->
+</body>
+</html>

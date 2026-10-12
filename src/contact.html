@@ -1,0 +1,109 @@
+<!--@page contact-->
+<!DOCTYPE html>
+<html lang="fr" class="is-loading">
+<head>
+<!--@head-->
+  <title>Contactez-nous | Hyperion Software</title>
+  <meta name="description" content="Contactez Hyperion Software : client final, revendeur ou support technique. Votre partenaire de confiance en cybersécurité et protection des données." />
+  <script src="js/contact-config.js"></script>
+</head>
+<body>
+<!--@sprite-->
+<!--@intro-->
+<!--@nav-->
+
+  <main id="top">
+    <!-- ============ CONTACT : coordonnées à gauche, formulaire selon le profil à droite ============ -->
+    <section class="ct-hero">
+      <div class="bgfx bgfx--sky" aria-hidden="true"></div>
+      <div class="container ct-grid">
+        <div class="ct-intro">
+          <h1 class="h1 hero-title"><span class="ln"><span class="ln-in">Contactez-<em>nous</em></span></span></h1>
+          <p class="ct-lead" data-intro>Votre partenaire de confiance en <span class="accent">cybersécurité</span> et protection des données</p>
+
+          <a class="ct-phone" href="tel:+33980806003" data-intro>
+            <svg><use href="#i-phone"/></svg>
+            <span><small>Téléphone</small><b>+33 (0) 9 80 80 60 03</b></span>
+          </a>
+          <div class="actions" data-intro>
+            <a class="btn btn--ink magnetic" href="https://calendly.com/sp-hyperion-soft/30min" target="_blank" rel="noopener">
+              <span class="btn-label" data-text="Prendre Rendez vous">Prendre Rendez vous</span>
+              <span class="btn-ico"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+            </a>
+          </div>
+
+          <div class="ct-offices" data-intro>
+            <h2 class="ct-offices-title">Nos <em>coordonnées</em></h2>
+            <div class="ct-office" data-tz="Europe/London">
+              <svg class="ct-clock" viewBox="0 0 64 64" aria-hidden="true"><circle class="face" cx="32" cy="32" r="30"/><g class="ticks"></g><line class="h" x1="32" y1="32" x2="32" y2="18"/><line class="m" x1="32" y1="32" x2="32" y2="10"/><line class="s" x1="32" y1="36" x2="32" y2="8"/><circle class="pin" cx="32" cy="32" r="2.4"/></svg>
+              <div><b>Londres, UK</b><p>207 Regent Street, LONDON, W1B 3HH</p><span class="ct-time" aria-hidden="true"></span></div>
+            </div>
+            <div class="ct-office" data-tz="Europe/Madrid">
+              <svg class="ct-clock" viewBox="0 0 64 64" aria-hidden="true"><circle class="face" cx="32" cy="32" r="30"/><g class="ticks"></g><line class="h" x1="32" y1="32" x2="32" y2="18"/><line class="m" x1="32" y1="32" x2="32" y2="10"/><line class="s" x1="32" y1="36" x2="32" y2="8"/><circle class="pin" cx="32" cy="32" r="2.4"/></svg>
+              <div><b>Roses, España</b><p>Avenida del Nord 43, 17480 ROSES</p><span class="ct-time" aria-hidden="true"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ct-panel" id="ctPanel" data-intro>
+          <h2 class="ct-panel-title">Contactez-nous selon votre <em>profil</em></h2>
+          <div class="ct-profiles" role="tablist" aria-label="Votre profil">
+            <button class="ct-prof is-on" type="button" role="tab" aria-selected="true" data-kind="client"><b>Client final</b><span>Vous êtes un client final et vous avez une question&nbsp;?</span></button>
+            <button class="ct-prof" type="button" role="tab" aria-selected="false" data-kind="revendeur"><b>Revendeur</b><span>Vous êtes un revendeur ou souhaitez le devenir&nbsp;?</span></button>
+            <button class="ct-prof" type="button" role="tab" aria-selected="false" data-kind="support"><b>Support technique</b><span>Déjà client&nbsp;? Contactez notre support.</span></button>
+          </div>
+
+          <div class="ct-view" id="ctFormView">
+            <div class="ct-form-head" data-kind="client"><h3>Contact Client Final</h3><p>Remplissez le formulaire ci-dessous, nous vous répondrons dans les plus brefs délais.</p></div>
+            <div class="ct-form-head" data-kind="revendeur" hidden><h3>Contact Revendeur</h3><p>Remplissez le formulaire ci-dessous pour devenir revendeur ou poser une question.</p></div>
+            <form class="ct-form" id="ctForm" method="post" novalidate>
+              <input type="hidden" name="type" id="ctType" value="client" />
+              <div class="ct-row">
+                <div class="ct-field"><label for="ct-nom">Nom</label><input id="ct-nom" name="nom" autocomplete="family-name" required /></div>
+                <div class="ct-field"><label for="ct-prenom">Prénom</label><input id="ct-prenom" name="prenom" autocomplete="given-name" required /></div>
+              </div>
+              <div class="ct-field"><label for="ct-email">E-mail professionnel</label><input id="ct-email" name="email" type="email" autocomplete="email" required /></div>
+              <div class="ct-row">
+                <div class="ct-field"><label for="ct-telephone">Téléphone</label><input id="ct-telephone" name="telephone" type="tel" autocomplete="tel" required /></div>
+                <div class="ct-field"><label for="ct-societe">Société</label><input id="ct-societe" name="societe" autocomplete="organization" required /></div>
+              </div>
+              <div class="ct-field"><label for="ct-message">Message</label><textarea id="ct-message" name="message" rows="3" required></textarea></div>
+              <div class="ct-submit">
+                <div class="ct-progress" aria-hidden="true">
+                  <svg viewBox="0 0 44 44"><circle class="trk" cx="22" cy="22" r="18"/><circle class="bar" id="ctRing" cx="22" cy="22" r="18"/><path class="ok" d="M15 22.5l4.6 4.4L29 17.5"/></svg>
+                  <span id="ctCount">0/6</span>
+                </div>
+                <button class="btn btn--blue" type="submit" id="ctSend">
+                  <span class="btn-label" data-text="Envoyer">Envoyer</span>
+                  <span class="btn-ico"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+                </button>
+              </div>
+              <p class="ct-error" id="ctError" role="alert" hidden><b>Erreur d'envoi</b> Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.</p>
+            </form>
+            <div class="ct-done" id="ctDone" hidden>
+              <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36"/><path d="M25 41l10 10 21-22"/></svg>
+              <h3>Message envoyé&nbsp;!</h3>
+              <p>Nous vous répondrons dans les plus brefs délais. Une copie a été envoyée à votre adresse email.</p>
+            </div>
+          </div>
+
+          <div class="ct-view ct-support" id="ctSupportView" hidden>
+            <h3>Support technique</h3>
+            <p>Déjà client&nbsp;? Contactez notre support.</p>
+            <div class="actions">
+              <a class="btn btn--blue magnetic" href="https://support-hyperion.com/rma/" target="_blank" rel="noopener">
+                <span class="btn-label" data-text="Fiche RMA">Fiche RMA</span>
+                <span class="btn-ico"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+              </a>
+              <a class="link-u" href="tel:+33980806003"><span>+33 (0) 9 80 80 60 03</span><svg><use href="#i-phone"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+<!--@footer-->
+</body>
+</html>

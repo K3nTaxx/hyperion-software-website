@@ -1,0 +1,266 @@
+<!--@page surv-->
+<!DOCTYPE html>
+<html lang="fr" class="is-loading">
+<head>
+<!--@head-->
+  <title>Gestion centralisée — Surveillance des sauvegardes / Infrastructures | Hyperion Software</title>
+  <meta name="description" content="DataClone : la solution simple, économique et efficace pour la gestion centralisée de la sécurité, pour les revendeurs et les MSP." />
+</head>
+<body>
+<!--@sprite-->
+<!--@intro-->
+<!--@nav-->
+
+  <main id="top">
+    <!-- ============ HERO : la console DataClone, en direct ============ -->
+    <section class="sv-hero">
+      <div class="bgfx bgfx--chart" aria-hidden="true"></div>
+      <div class="container sv-hero-grid">
+        <div class="sv-hero-copy">
+          <h1 class="h1 hero-title"><span class="ln"><span class="ln-in">Gestion <em>centralisée</em></span></span></h1>
+          <p class="sv-sub" data-intro>Surveillance des sauvegardes / Infrastructures</p>
+          <p class="sv-lead" data-intro>La solution simple, économique et efficace pour la gestion centralisée de la sécurité, pour les revendeurs et les MSP.</p>
+          <div class="actions" data-intro>
+            <a class="btn btn--ink magnetic" href="https://calendly.com/sp-hyperion-soft/30min" target="_blank" rel="noopener">
+              <span class="btn-label" data-text="Prendre Rendez vous">Prendre Rendez vous</span>
+              <span class="btn-ico"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="link-u" href="contact.html"><span>Nous contacter</span><svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+
+        <div class="sv-console-scene" data-intro aria-hidden="true">
+          <div class="sv-console" id="svConsole">
+            <div class="svc-bar">
+              <span class="svc-dots"><i></i><i></i><i></i></span>
+              <span class="svc-crumb"><svg><use href="#i-gauge"/></svg>Clients</span>
+              <span class="svc-user"><svg><use href="#i-users"/></svg>Administrateur</span>
+            </div>
+            <div class="svc-body">
+              <div class="svc-health">
+                <div class="svc-donut">
+                  <svg viewBox="0 0 120 120"><circle class="trk" cx="60" cy="60" r="48"/><circle class="arc" id="svDonut" cx="60" cy="60" r="48"/></svg>
+                  <div class="svc-donut-v"><b><span id="svPct">0,0</span>&nbsp;%</b><small>sauvegardes réussies</small></div>
+                </div>
+                <ul class="svc-stats">
+                  <li class="is-ok"><span>Sauvegardes réussies</span><b data-to="100">0,0&nbsp;%</b><i></i></li>
+                  <li class="is-warn"><span>Erreurs mineures</span><b>0,0&nbsp;%</b><i></i></li>
+                  <li class="is-crit"><span>Erreurs critiques</span><b>0,0&nbsp;%</b><i></i></li>
+                </ul>
+              </div>
+              <div class="svc-cap">
+                <div class="svc-cap-top"><span>Capacité de sauvegarde restante</span><b><span id="svCap">0,0</span>&nbsp;% sur 4,4 To</b></div>
+                <div class="svc-cap-bar"><i id="svCapBar"></i></div>
+              </div>
+              <div class="svc-table">
+                <div class="svc-th"><span>Sauvegardes</span><span>Nom</span><span>Date</span><span>Taille</span></div>
+                <div class="svc-rows" id="svRows"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TROIS PILIERS ============ -->
+    <section class="sec sv-pillars-sec">
+      <div class="container sv-pillars">
+        <article class="sv-pillar">
+          <div class="sv-pg" aria-hidden="true">
+            <svg class="pg-hub" viewBox="0 0 240 150">
+              <g class="hub-lines">
+                <path d="M30 40 L120 75"/><path d="M30 110 L120 75"/><path d="M120 14 L120 75"/><path d="M120 136 L120 75"/><path d="M210 40 L120 75"/><path d="M210 110 L120 75"/>
+              </g>
+              <g class="hub-pkts">
+                <circle r="3.5"><animateMotion dur="2.2s" repeatCount="indefinite" path="M30 40 L120 75"/></circle>
+                <circle r="3.5"><animateMotion dur="2.2s" begin=".4s" repeatCount="indefinite" path="M210 110 L120 75"/></circle>
+                <circle r="3.5"><animateMotion dur="2.2s" begin=".9s" repeatCount="indefinite" path="M120 14 L120 75"/></circle>
+                <circle r="3.5"><animateMotion dur="2.2s" begin="1.3s" repeatCount="indefinite" path="M30 110 L120 75"/></circle>
+                <circle r="3.5"><animateMotion dur="2.2s" begin="1.7s" repeatCount="indefinite" path="M210 40 L120 75"/></circle>
+              </g>
+              <g class="hub-nodes">
+                <g transform="translate(30 40)"><circle r="15"/><use href="#i-server" x="-8" y="-8" width="16" height="16"/></g>
+                <g transform="translate(30 110)"><circle r="15"/><use href="#i-monitor" x="-8" y="-8" width="16" height="16"/></g>
+                <g transform="translate(120 14)"><circle r="13"/><use href="#i-db" x="-7" y="-7" width="14" height="14"/></g>
+                <g transform="translate(120 136)"><circle r="13"/><use href="#i-drive" x="-7" y="-7" width="14" height="14"/></g>
+                <g transform="translate(210 40)"><circle r="15"/><use href="#i-cloud" x="-8" y="-8" width="16" height="16"/></g>
+                <g transform="translate(210 110)"><circle r="15"/><use href="#i-monitor" x="-8" y="-8" width="16" height="16"/></g>
+              </g>
+              <circle class="hub-core" cx="120" cy="75" r="25"/>
+              <image href="assets/img/hyperion-shield.png" x="108" y="61" width="24" height="29"/>
+            </svg>
+          </div>
+          <h3>Sécurité <em class="title-it">Centralisée</em></h3>
+          <p>Gestion complète et sécurisée de vos infrastructures</p>
+        </article>
+        <article class="sv-pillar">
+          <div class="sv-pg" aria-hidden="true">
+            <svg class="pg-live" viewBox="0 0 240 150">
+              <defs>
+                <linearGradient id="svLiveFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e44f0" stop-opacity=".22"/><stop offset="1" stop-color="#1e44f0" stop-opacity="0"/></linearGradient>
+                <clipPath id="svLiveClip"><rect x="0" y="0" width="226" height="150"/></clipPath>
+              </defs>
+              <g class="live-grid"><path d="M0 30 H240 M0 66 H240 M0 102 H240 M0 138 H240"/></g>
+              <g clip-path="url(#svLiveClip)"><g class="live-track" id="svLive"></g></g>
+              <circle class="live-dot" cx="226" cy="70" r="5" id="svLiveDot"/>
+              <circle class="live-ring" cx="226" cy="70" r="5" id="svLiveRing"/>
+            </svg>
+          </div>
+          <h3>Monitoring <em class="title-it">Avancé</em></h3>
+          <p>Surveillance en temps réel de vos sauvegardes</p>
+        </article>
+        <article class="sv-pillar">
+          <div class="sv-pg" aria-hidden="true">
+            <div class="pg-ctrl" id="svCtrl">
+              <div class="ctrl-row"><i class="ctrl-ico"><svg><use href="#i-server"/></svg></i><span class="ctrl-line"></span><span class="switch"></span></div>
+              <div class="ctrl-row"><i class="ctrl-ico"><svg><use href="#i-users"/></svg></i><span class="ctrl-line"></span><span class="switch"></span></div>
+              <div class="ctrl-row"><i class="ctrl-ico"><svg><use href="#i-shield"/></svg></i><span class="ctrl-line"></span><span class="switch"></span></div>
+              <svg class="ctrl-cursor" viewBox="0 0 24 24"><path d="M5 3l14 8-6.2 1.6L10 19z"/></svg>
+            </div>
+          </div>
+          <h3>Contrôle <em class="title-it">Total</em></h3>
+          <p>Interface intuitive pour une gestion simplifiée</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONCEPT : les ordinateurs surveillés remontent vers la console ============ -->
+    <section class="sec sec--alt sv-concept">
+      <div class="container sv-concept-grid">
+        <div class="sv-concept-copy">
+          <h2 class="h2 reveal"><em>Concept</em></h2>
+          <p class="sv-concept-lead reveal">Grâce à DataClone, il est possible de surveiller les installations et l'état de santé de la protection des données.</p>
+          <p class="reveal">Grâce à l'intégration complète vous pouvez vous connecter à distance aux ordinateurs surveillés d'un simple clic.</p>
+        </div>
+        <figure class="sv-net" aria-hidden="true">
+          <svg viewBox="0 0 660 470" id="svNet">
+            <text class="net-lab" x="635" y="22" text-anchor="end">ordinateurs surveillés</text>
+            <g class="net-sites">
+              <rect x="420" y="38" width="220" height="112" rx="14"/>
+              <rect x="420" y="178" width="220" height="112" rx="14"/>
+              <rect x="420" y="318" width="220" height="112" rx="14"/>
+            </g>
+            <g class="net-links" id="svLinks"></g>
+            <g class="net-pkts" id="svPkts"></g>
+            <path class="net-beam" id="svBeam" d=""/>
+            <g class="net-machines" id="svMachines"></g>
+            <g class="net-laptop">
+              <rect class="lt-screen" x="34" y="150" width="210" height="136" rx="10"/>
+              <rect class="lt-head" x="34" y="150" width="210" height="20" rx="10"/>
+              <rect class="lt-head-sq" x="34" y="160" width="210" height="10"/>
+              <circle class="lt-dot" cx="48" cy="160" r="3"/><circle class="lt-dot" cx="58" cy="160" r="3"/><circle class="lt-dot" cx="68" cy="160" r="3"/>
+              <circle class="lt-donut-t" cx="82" cy="226" r="26"/>
+              <circle class="lt-donut" cx="82" cy="226" r="26" id="svLtDonut"/>
+              <rect class="lt-bar lt-ok" x="124" y="194" width="100" height="14" rx="4"/>
+              <rect class="lt-bar lt-warn" x="124" y="218" width="100" height="14" rx="4"/>
+              <rect class="lt-bar lt-crit" x="124" y="242" width="100" height="14" rx="4"/>
+              <path class="lt-base" d="M14 292 H264 L250 306 H28 Z"/>
+              <g class="lt-cursor" id="svCursor"><path d="M0 0l14 8-6.2 1.6L5 16z"/></g>
+            </g>
+            <text class="net-lab net-lab--ink" x="139" y="340" text-anchor="middle">revendeurs et MSP</text>
+            <text class="net-click" id="svClickLab" x="330" y="0" text-anchor="middle">d'un simple clic</text>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ PHRASE ============ -->
+    <section class="sec sv-statement-sec">
+      <div class="container">
+        <p class="statement statement--md"><span class="accent">Gain de temps et de ressources,</span> simplification du travail de surveillance de l'infrastructure informatique et des sauvegardes des clients.</p>
+      </div>
+    </section>
+
+    <!-- ============ AVANTAGES ============ -->
+    <section class="sec sec--navy on-dark sv-adv">
+      <div class="container">
+        <div class="sv-adv-head">
+          <h2 class="h2 reveal"><em>Avantages</em></h2>
+          <div class="sv-adv-text">
+            <p class="reveal">DataClone inclut une fonctionnalité puissante de surveillance de toutes les installations et toutes les sauvegardes sur une Console web centralisée. L'interface de DataClone vous permet de visualiser les résultats des sauvegardes, de visualiser les détails de toutes les erreurs.</p>
+            <p class="reveal">En outre, vous disposez de nombreuses informations pour connaître l'état de chaque Serveur de sauvegarde.</p>
+          </div>
+        </div>
+
+        <div class="sv-bento" id="svBento">
+          <article class="svb svb--dash">
+            <div class="svb-g" aria-hidden="true">
+              <svg viewBox="0 0 260 120">
+                <circle class="g-trk" cx="58" cy="60" r="40"/>
+                <circle class="g-donut" cx="58" cy="60" r="40"/>
+                <text class="g-donut-v" x="58" y="66" text-anchor="middle">100 %</text>
+                <rect class="g-bar-t" x="122" y="28" width="124" height="10" rx="5"/><rect class="g-bar g-ok" x="122" y="28" width="124" height="10" rx="5"/>
+                <rect class="g-bar-t" x="122" y="56" width="124" height="10" rx="5"/><rect class="g-bar g-warn" x="122" y="56" width="4" height="10" rx="2"/>
+                <rect class="g-bar-t" x="122" y="84" width="124" height="10" rx="5"/><rect class="g-bar g-crit" x="122" y="84" width="4" height="10" rx="2"/>
+              </svg>
+            </div>
+            <p>Tableau de bord avec statistiques complètes sur la santé des sauvegardes</p>
+          </article>
+          <article class="svb svb--rights">
+            <div class="svb-g" aria-hidden="true">
+              <div class="g-matrix" id="svMatrix">
+                <svg class="g-user"><use href="#i-users"/></svg><i></i><i></i><i></i><i></i>
+                <svg class="g-user"><use href="#i-users"/></svg><i></i><i></i><i></i><i></i>
+                <svg class="g-user"><use href="#i-users"/></svg><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <p>Gestion des groupes et des utilisateurs et personnalisation des droits d'accès</p>
+          </article>
+          <article class="svb svb--mobile">
+            <div class="svb-g" aria-hidden="true">
+              <div class="g-phone"><span class="g-phone-notch"></span><img src="assets/img/ui-success.webp" alt="" loading="lazy" /><img class="g-phone-donut" src="assets/img/ui-donut.webp" alt="" loading="lazy" /></div>
+            </div>
+            <p><b>Egalement disponible sur Android et iOS</b></p>
+          </article>
+          <article class="svb svb--missed">
+            <div class="svb-g" aria-hidden="true">
+              <div class="g-days" id="svDays"></div>
+            </div>
+            <p>Avertissements détaillés sur les sauvegardes non exécutées</p>
+          </article>
+          <article class="svb svb--report">
+            <div class="svb-g" aria-hidden="true">
+              <div class="g-report" id="svReport">
+                <div class="g-pc"><svg><use href="#i-monitor"/></svg><i></i></div>
+                <ul><li style="--w:82%"></li><li style="--w:64%"></li><li class="is-err" style="--w:74%"></li><li style="--w:52%"></li><li style="--w:68%"></li></ul>
+              </div>
+            </div>
+            <p>Rapports d'erreurs détaillés et état de l'ordinateur</p>
+          </article>
+          <article class="svb svb--devices">
+            <div class="svb-g" aria-hidden="true">
+              <svg viewBox="0 0 420 130" id="svDevices">
+                <path class="dv-link" d="M150 70 H205 M285 70 H330"/>
+                <g class="dv dv-laptop"><rect x="10" y="22" width="130" height="84" rx="7"/><path d="M0 110 H150 L142 118 H8 Z"/><circle class="dv-led" cx="128" cy="34" r="5"/></g>
+                <g class="dv dv-tablet"><rect x="215" y="16" width="64" height="100" rx="9"/><circle class="dv-led" cx="267" cy="30" r="5"/></g>
+                <g class="dv dv-phone"><rect x="340" y="28" width="46" height="84" rx="9"/><circle class="dv-led" cx="375" cy="42" r="5"/></g>
+              </svg>
+            </div>
+            <p>Vérifier l'état des sauvegardes et des ordinateurs de vos clients depuis n'importe quel appareil</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="sec">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h3 class="h2">Contrôle complet de la sauvegarde et de l'infrastructure <em>S.I.</em></h3>
+          </div>
+          <div class="actions">
+            <a class="btn btn--white magnetic" href="https://calendly.com/sp-hyperion-soft/30min" target="_blank" rel="noopener">
+              <span class="btn-label" data-text="Prendre Rendez vous">Prendre Rendez vous</span>
+              <span class="btn-ico"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="link-u link-u--light" href="contact.html"><span>Nous contacter</span><svg><use href="#i-arrow-ne"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!--@footer-->
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Fins de ligne : LF partout (comme les fichiers générés), CRLF pour le lanceur Windows
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ico binary
