@@ -9,6 +9,6 @@ if errorlevel 1 (
 )
 rem regenere les pages depuis src/ (elles ne sont pas sur GitHub : Netlify les construit lui-meme)
 python tools\build.py >nul
-start "Hyperion NOUVELLE VERSION - serveur local (fermer pour arreter)" /min python tools\serve.py 5530
+start "Hyperion - serveur local (fermer pour arreter)" /min python tools\serve.py 5520
 timeout /t 1 /nobreak >nul
-start "" "http://localhost:5530/index.html"
+start "" "http://localhost:5520/index.html"

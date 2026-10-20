@@ -14,26 +14,27 @@ PARTS = os.path.join(SRC, 'partials')
 
 # which menu entry is highlighted on each page
 PAGES = {
-    'home':      {'section': 'home', 'current': None},
-    'dataclone': {'section': 'dataclone', 'current': 'DATACLONE'},
-    'vmware':    {'section': 'dataclone', 'current': 'VMWARE'},
-    'exchange':  {'section': 'dataclone', 'current': 'EXCH'},
-    'disque':    {'section': 'dataclone', 'current': 'DISQUE'},
-    'surv':      {'section': 'dataclone', 'current': 'SURV'},
-    'stealth':   {'section': 'cyber', 'current': 'STEALTH'},
-    'airgap':    {'section': 'cyber', 'current': 'AIRGAP'},
-    'rdo':       {'section': 'cyber', 'current': 'RDO'},
-    'anssi':     {'section': 'cyber', 'current': 'ANSSI'},
-    'dr':        {'section': 'cyber', 'current': 'DR'},
-    'appl':      {'section': 'offres', 'current': 'APPL'},
-    'saas':      {'section': 'offres', 'current': 'SAAS'},
-    'cloud':     {'section': 'offres', 'current': 'CLOUD'},
-    'pourquoi':  {'section': 'hyperion', 'current': 'POURQUOI'},
-    'dattak':    {'section': 'hyperion', 'current': 'DATTAK'},
-    'partners':  {'section': 'hyperion', 'current': 'PARTNERS'},
-    'rentree':   {'section': 'hyperion', 'current': 'RENTREE'},
-    'contact':   {'section': None, 'current': None},
-    'rgpd':      {'section': None, 'current': None},
+    'home':    {'section': 'home',  'current': None},
+    'stealth': {'section': 'cyber', 'current': 'STEALTH'},
+    'anssi':   {'section': 'cyber', 'current': 'ANSSI'},
+    'dattak':  {'section': 'cyber', 'current': 'DATTAK'},
+    'contact': {'section': None,    'current': None},
+    'surv':    {'section': 'dataclone', 'current': 'SURV'},
+    'disque':  {'section': 'dataclone', 'current': 'DISQUE'},
+    'appl':    {'section': 'materiel', 'current': 'APPL'},
+    'rdo':     {'section': 'materiel', 'current': 'RDO'},
+    'rentree': {'section': None, 'current': None},
+    'vmware':  {'section': 'dataclone', 'current': 'VMWARE'},
+    'exchange': {'section': 'dataclone', 'current': 'EXCH'},
+    'cloud':   {'section': 'saas', 'current': 'CLOUD'},
+    'saas':    {'section': 'saas', 'current': 'SAAS'},
+    'dr':      {'section': 'cyber', 'current': 'DR'},
+    'airgap':  {'section': 'cyber', 'current': 'AIRGAP'},
+    'csirt':   {'section': 'cyber', 'current': 'CSIRT'},
+    'campus':  {'section': 'cyber', 'current': 'CAMPUS'},
+    'pourquoi': {'section': None, 'current': None},
+    'temoignages': {'section': None, 'current': None},
+    'rgpd':    {'section': None, 'current': None},
 }
 
 INTRO = '''  <div class="intro" id="intro" aria-hidden="true">
@@ -54,10 +55,15 @@ def nav_for(key):
     html = html.replace('{{HOME_HREF}}', '#top' if home else 'index.html')
     html = html.replace('{{HOME_ATTR}}', ' data-scroll-top' if home else '')
     html = html.replace('{{ACTIVE_HOME}}', ' is-active' if cfg['section'] == 'home' else '')
-    for sec in ('dataclone', 'cyber', 'offres', 'hyperion'):
-        html = html.replace('{{ACTIVE_%s}}' % sec.upper(), ' is-active' if cfg['section'] == sec else '')
-        html = html.replace('{{OPEN_%s}}' % sec.upper(), ' open' if cfg['section'] == sec else '')
-    for cur in set(c['current'] for c in PAGES.values() if c['current']):
+    html = html.replace('{{ACTIVE_CYBER}}', ' is-active' if cfg['section'] == 'cyber' else '')
+    html = html.replace('{{ACTIVE_DATACLONE}}', ' is-active' if cfg['section'] == 'dataclone' else '')
+    html = html.replace('{{OPEN_DATACLONE}}', ' open' if cfg['section'] == 'dataclone' else '')
+    html = html.replace('{{ACTIVE_MATERIEL}}', ' is-active' if cfg['section'] == 'materiel' else '')
+    html = html.replace('{{OPEN_MATERIEL}}', ' open' if cfg['section'] == 'materiel' else '')
+    html = html.replace('{{ACTIVE_SAAS}}', ' is-active' if cfg['section'] == 'saas' else '')
+    html = html.replace('{{OPEN_SAAS}}', ' open' if cfg['section'] == 'saas' else '')
+    html = html.replace('{{OPEN_CYBER}}', ' open' if cfg['section'] == 'cyber' else '')
+    for cur in ('STEALTH', 'ANSSI', 'DATTAK', 'SURV', 'DISQUE', 'APPL', 'RDO', 'VMWARE', 'EXCH', 'CLOUD', 'SAAS', 'DR', 'AIRGAP', 'CSIRT', 'CAMPUS'):
         html = html.replace('{{CUR_%s}}' % cur, ' class="is-current" aria-current="page"' if cfg['current'] == cur else '')
     return html
 

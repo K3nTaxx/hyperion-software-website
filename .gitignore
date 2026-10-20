@@ -8,6 +8,9 @@
 # Le site utilise ses propres versions dans assets/ (bouclier vectoriel, police du logo).
 /Logos/
 
+# Anciennes maquettes (référence uniquement)
+/_archive/
+
 # Divers
 __pycache__/
 *.pyc

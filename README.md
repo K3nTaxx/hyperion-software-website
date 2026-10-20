@@ -17,17 +17,16 @@ GitHub → `hyperion-software-website`. Laisser les réglages proposés (ils vie
 
 - Les pages se modifient dans `src/` (une page = un fichier) ; le menu, le pied de page, l'en-tête et les icônes
   sont partagés dans `src/partials/`.
-- Style : `css/style.css`. Animations : `js/app.js`. Intro et bouclier 3D : `js/intro3d.js`.
+- Style : `css/style.css`. Animations : `js/app.js`. Intro 3D : `js/intro3d.js`.
   Formulaire de contact : `js/contact-config.js`.
 - `python tools/build.py` régénère les pages (à la racine) ; `Ouvrir le site.bat` le fait puis ouvre le site
-  en local sur http://localhost:5530.
+  en local sur http://localhost:5520.
 - Les règles de design (texte repris du site d'origine, titres, couleurs, ce qu'il ne faut jamais faire) sont
-  dans `.claude/skills/hyperion-design/SKILL.md` ; l'organisation des pages dans `REORGANISATION.md`.
+  dans `.claude/skills/hyperion-design/SKILL.md`.
 
 ## Pages
 
-Accueil · DataClone (vue d'ensemble, VMware & Hyper-V, Exchange & Office 365, Image disque & P2V,
-Gestion centralisée) · Cyber-résilience (Mode Stealth®, Air Gap, Médias RDO®, Conformité ANSSI,
-Disaster Recovery Test) · Appliances & Cloud (Appliances, DataClone SaaS, Backup Cloud Azure) ·
-Hyperion (Pourquoi Hyperion, Cyber-assurance Dattak, Partenariats Région Sud, Actualités) · Contact ·
-Confidentialité.
+Accueil · Mode Stealth · Conformité ANSSI · Cyber-assurance Dattak · Contact · Gestion centralisée · Image disque ·
+Appliances · Option RDO · Rentrée 2026 · Sauvegarde VMware · Sauvegarde Exchange · Sauvegarde Cloud · SaaS ·
+Disaster Recovery Test · Sauvegarde Air Gap · Partenariat CSIRT · Partenariat Campus Cyber · Pourquoi nous choisir ·
+Témoignages · Confidentialité.

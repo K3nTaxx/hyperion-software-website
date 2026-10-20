@@ -23,6 +23,13 @@ FOLDERS = ('css', 'js', 'assets')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build  # noqa: E402
 
+# messages with accents must never stop the build, whatever the console encoding
+for stream in (sys.stdout, sys.stderr):
+    try:
+        stream.reconfigure(errors='replace')
+    except (AttributeError, ValueError):
+        pass
+
 
 def exists_exact(rel):
     cur = DIST

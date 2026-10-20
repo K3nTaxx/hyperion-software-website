@@ -49,16 +49,10 @@ Enlever les tics d'IA ne veut pas dire tout aplatir : chaque page doit rester sp
     des spécifications avec coches.
   - Option RDO : page produit "à la Apple" (titre centré, cartouche qui glisse, 3 chiffres), tableau
     bande / disque / RDO qui se coche, parcours vers "lieu sûr", "Exit les LTO" barré, 576 To.
-  - Accueil (version "monumentale", nouvelle version du site) : titre "Sauvegarde Cybersécurisée Anti-Ransomware"
-    et scène produits (validés) → "3 dates vont changer la sauvegarde." : circuits temporels en LED à points (idée du
-    client sur son site), une ligne cliquée = la date se règle et l'annonce s'ouvre → "Hyperion Software en 20
-    secondes" (phrase qui se colore + 4 petits schémas) → jauges circulaires ("des ronds") + logos → néons blancs des
-    risques → 4 étapes : UN schéma collant qui se construit pendant la lecture (aspiration, Stealth, RDO, cloud,
-    sceau 100 %) → "Enfin une Solution de Sauvegarde agréée par votre Assureur Cyber !" avec le bouclier 3D qui
-    s'assemble et coche les 5 points. Les blocs sombres s'ouvrent en grand au défilement (carte arrondie → plein écran).
-    Bloc "Protection garantie" retiré à sa demande ; carrousel et bloc DataClone déplacés sur dataclone.html.
-  - Intro 3D : assemblage, un tour complet, puis éclatement immédiat ("boum, ça s'ouvre"). Refusé : le balayage de
-    lumière sur la face du logo avant l'ouverture.
+  - Accueil : titre "Sauvegarde Cybersécurisée Anti-Ransomware", chiffres de confiance en JAUGES CIRCULAIRES (le
+    client les appelle "des ronds", comme sur son site), logos clients juste après le haut de page, carrousel de
+    cartes pour les fonctionnalités, interface DataClone qui s'active, instances SaaS. Page finie sur le SaaS
+    (bloc "Protection garantie" retiré à sa demande).
   - "Vos sauvegardes sont-elles vraiment protégées" : NÉONS BLANCS (adorés) mais 4 formes différentes — 100 points
     dont 93 s'allument, tube qui se remplit à 94 %, niveau en lignes à 46 %, escalier des jours "5+". Refusé : la même
     forme répétée (4 ronds d'affilée).
@@ -170,13 +164,6 @@ Enlever les tics d'IA ne veut pas dire tout aplatir : chaque page doit rester sp
   (la ligne de la frise sautait) : suivre l'état actif avec une transition CSS.
 - Objets en perspective qui suivent la souris (`tilt()` dans `js/app.js`).
 - Pas de section épinglée. Défilement doux Lenis. Intro : logo puis rideau, < 1,5 s.
-
-## 6 bis. Organisation du site (nouvelle version)
-
-- Voir `REORGANISATION.md`. Menu en 4 univers : DataClone / Cyber-résilience / Appliances & Cloud / Hyperion.
-- Un sujet = une page de référence (Stealth → mode-stealth.html, RDO → medias-rdo.html, Dattak → cyber-assurance-dattak.html,
-  compatibilité et fonctionnalités → dataclone.html, option cloud → backup-cloud-azure.html). Ailleurs : résumé court +
-  lien « En savoir plus ». Ne jamais recopier une liste d'une page à l'autre.
 
 ## 7. Créer une nouvelle page
 
